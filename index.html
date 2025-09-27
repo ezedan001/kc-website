@@ -78,26 +78,31 @@
     <header class="navbar">
         <div class="nav-container">
             <!-- Logo -->
-            <div class="logo">🏠 RealEstate</div>
+            <div class="logo">
+                <img src="image/RealEstatePro Logo.jpg" alt="RealEstatePro Logo">
+                <a href="#">RealEstate<span>Pro</span></a>
+            </div>
 
-            <!-- Menu -->
-            <nav class="nav-menu">
-                <ul>
-                    <li><a href="#">Home</a></li>
+            <!-- Navigation Links -->
+            <nav>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#" class="active">Home</a></li>
                     <li><a href="#">Properties</a></li>
                     <li><a href="#">About Us</a></li>
                     <li><a href="#">Services</a></li>
-                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Blog / News</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
 
-            <!-- CTA Button -->
-            <a href="#" class="cta-btn">List Your Property</a>
+            <!-- Call-to-action -->
+            <a href="#" class="nav-btn">List Your Property</a>
 
-            <!-- Mobile Menu Icon -->
+            <!-- Mobile Toggle -->
             <div class="menu-toggle" id="menu-toggle">
-                ☰
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
     </header>
@@ -116,60 +121,70 @@
 
 
 
-    <section class="hero-2026">
-        <div class="background-media">
-            <video autoplay muted loop playsinline class="bg-video">
+
+    <section class="hero-section">
+        <!-- Background Video/Image -->
+        <div class="hero-bg">
+            <video autoplay muted loop playsinline class="video-bg">
                 <source src="video/Luxury modern villa.mp4" type="video/mp4">
-                <!-- fallback to image -->
             </video>
-            <img src="image/Luxury modern villa.jpg" alt="Luxury skyline / property view" class="bg-image">
+            <!-- Fallback image -->
+            <img src="luxury-skyline.jpg" alt="Luxury Skyline" class="image-bg">
         </div>
 
-        <div class="hero-overlay"></div>
+        <!-- Overlay -->
+        <div class="overlay"></div>
 
+        <!-- Hero Content -->
         <div class="hero-content">
-            <h1 class="hero-title">Find Your Dream Home</h1>
-            <p class="hero-subtitle">Luxury Listings • Prime Locations • Exclusive Deals</p>
+            <h1>Discover Your Dream Home</h1>
+            <p>Luxury properties curated for your lifestyle</p>
 
-            <form class="hero-search-form">
-                <div class="field-group">
-                    <input type="text" name="location" placeholder="Location (City, Area)" required>
-                </div>
+            <!-- Search Bar (Glass style) -->
+            <form class="hero-search">
+                <select>
+                    <option>Location</option>
+                    <option>New York</option>
+                    <option>Los Angeles</option>
+                    <option>Miami</option>
+                    <option>Dubai</option>
+                </select>
 
-                <div class="field-group">
-                    <select name="property_type">
-                        <option value="">Property Type</option>
-                        <option value="apartment">Apartment</option>
-                        <option value="house">House</option>
-                        <option value="villa">Villa</option>
-                        <option value="commercial">Commercial</option>
-                    </select>
-                </div>
+                <select>
+                    <option>Property Type</option>
+                    <option>Apartment</option>
+                    <option>Villa</option>
+                    <option>Penthouse</option>
+                    <option>Condo</option>
+                </select>
 
-                <div class="field-group">
-                    <select name="price_range">
-                        <option value="">Price Range</option>
-                        <option value="0-50000">$0-50k</option>
-                        <option value="50000-200000">$50k-200k</option>
-                        <option value="200000-500000">$200k-500k</option>
-                        <option value="500000+">$500k+</option>
-                    </select>
-                </div>
+                <select>
+                    <option>Price Range</option>
+                    <option>$200k - $500k</option>
+                    <option>$500k - $1M</option>
+                    <option>$1M - $5M</option>
+                    <option>$5M+</option>
+                </select>
 
-                <div class="field-group">
-                    <select name="bedrooms">
-                        <option value="">Bedrooms</option>
-                        <option value="1">1+</option>
-                        <option value="2">2+</option>
-                        <option value="3">3+</option>
-                        <option value="4">4+</option>
-                    </select>
-                </div>
+                <select>
+                    <option>Bedrooms</option>
+                    <option>1+</option>
+                    <option>2+</option>
+                    <option>3+</option>
+                    <option>4+</option>
+                </select>
 
-                <button type="submit" class="hero-cta">Search Now</button>
+                <button type="submit">Search</button>
             </form>
+
+            <!-- Call-to-action -->
+            <a href="#" class="hero-cta">Find Your Dream Home</a>
         </div>
     </section>
+
+
+
+
 
 
 
