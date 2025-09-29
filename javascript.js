@@ -15,6 +15,164 @@ window.addEventListener("scroll", () => {
 
 
 
+
+
+
+
+//    <!--.... featured-listings..... -->//
+
+// ===============================
+// Property Data
+// ===============================
+const properties = {
+    property1: {
+        title: "Luxury Apartment",
+        location: "New York, Manhattan",
+        images: [
+            "serene image/serene lake 1.webp",
+            "serene image/serene lake 2.webp",
+            "serene image/serene lake 3.webp",
+            "serene image/serene lake 4.webp",
+            "serene image/serene lake 5.webp",
+            "serene image/serene lake 6.webp",
+            "serene image/serene lake 7.webp",
+            "serene image/serene lake 8.webp",
+            "serene image/serene lake 9.webp",
+            "serene image/serene lake 10.webp",
+            "serene image/serene lake 11.webp",
+            "serene image/serene lake 12.webp",
+            "serene image/serene lake 13.webp",
+            "serene image/serene lake 14.webp",
+            "serene image/serene lake 15.webp",
+            "serene image/serene lake 16.webp",
+            "serene image/serene lake 17.webp",
+            "serene image/serene lake 18.webp",
+            "serene image/serene lake 19.webp",
+            "serene image/serene lake 20.webp",
+            "serene image/serene lake 21.webp",
+            "serene image/serene lake 22.webp",
+            "serene image/serene lake 23.webp",
+            "serene image/serene lake 24.webp",
+            "serene image/serene lake 25.webp",
+            "serene image/serene lake 26.webp",
+            "serene image/serene lake 27.webp",
+            "serene image/serene lake 28.webp",
+            "serene image/serene lake 29.webp"
+        ],
+        description: "A luxurious apartment with modern design, 4 bedrooms, 4 bathrooms, amazing city views, and balcony.",
+        facts: { Bedrooms: 4, Bathrooms: 4, Stories: 2, "Interior Area": "2,730 sqft", "Total Structure": "4,219 sqft" },
+        interior: { Heating: "Electric", Cooling: "Central Air", Appliances: ["Dishwasher", "Dryer", "Microwave", "Electric Range", "Refrigerator", "Washer"], Flooring: "Other", Doors: "High Impact Doors" },
+        bedsBaths: { Full: 3, Half: 1, Rooms: ["Family Room", "Florida Room"] },
+        parkingPool: { Garage: 2, ParkingSpaces: 2, Pool: "Yes, In Ground", View: "Lake, Pool", WaterView: "Yes" },
+        lotConstruction: { LotSize: "0.69 Acres", YearBuilt: 1986, Construction: "CBS Construction", Roof: "Barrel Roof", Zoning: "0100" },
+        agent: "John Doe | +123456789",
+        agentImg: "serene image/agent 1.jpg",
+        mapEmbed: "<iframe src='https://maps.google.com/maps?q=New%20York%20Manhattan&t=&z=13&ie=UTF8&iwloc=&output=embed' width='100%' height='300' style='border:0;' allowfullscreen='' loading='lazy'></iframe>"
+    }
+};
+
+// Modal Elements
+const modal = document.querySelector(".premium-modal");
+const mainImg = modal.querySelector(".main-img img");
+const thumbsContainer = modal.querySelector(".thumbs");
+const closeBtn = modal.querySelector(".close-btn");
+const modalTitle = modal.querySelector("#modalTitle");
+const modalLocation = modal.querySelector("#modalLocation");
+const modalDescription = modal.querySelector("#modalDescription");
+const modalFacts = modal.querySelector("#modalFacts");
+const modalInterior = modal.querySelector("#modalInterior");
+const modalBedsBaths = modal.querySelector("#modalBedsBaths");
+const modalParking = modal.querySelector("#modalParking");
+const modalLot = modal.querySelector("#modalLot");
+const modalAgent = modal.querySelector("#modalAgent");
+const modalAgentImg = modal.querySelector("#modalAgentImg");
+const modalMap = modal.querySelector("#modalMap");
+const prevBtn = modal.querySelector(".prev-btn");
+const nextBtn = modal.querySelector(".next-btn");
+
+// Mortgage
+const mortgageAmount = modal.querySelector("#mortgageAmount");
+const mortgageYears = modal.querySelector("#mortgageYears");
+const mortgageRate = modal.querySelector("#mortgageRate");
+const calculateMortgageBtn = modal.querySelector("#calculateMortgage");
+const mortgageResult = modal.querySelector("#mortgageResult");
+
+let currentIndex = 0;
+let currentImages = [];
+
+document.querySelectorAll(".property-card").forEach(card => {
+    card.addEventListener("click", () => {
+        const prop = properties[card.dataset.property];
+        modal.style.display = "block";
+
+        modalTitle.textContent = prop.title;
+        modalLocation.textContent = prop.location;
+        modalDescription.textContent = prop.description;
+        modalFacts.innerHTML = Object.entries(prop.facts).map(([k, v]) => `<li><strong>${k}:</strong> ${v}</li>`).join('');
+        modalInterior.innerHTML = Object.entries(prop.interior).map(([k, v]) => `<li><strong>${k}:</strong> ${Array.isArray(v) ? v.join(', ') : v}</li>`).join('');
+        modalBedsBaths.innerHTML = Object.entries(prop.bedsBaths).map(([k, v]) => `<li><strong>${k}:</strong> ${Array.isArray(v) ? v.join(', ') : v}</li>`).join('');
+        modalParking.innerHTML = Object.entries(prop.parkingPool).map(([k, v]) => `<li><strong>${k}:</strong> ${v}</li>`).join('');
+        modalLot.innerHTML = Object.entries(prop.lotConstruction).map(([k, v]) => `<li><strong>${k}:</strong> ${v}</li>`).join('');
+        modalAgent.textContent = prop.agent;
+        modalAgentImg.src = prop.agentImg;
+        modalMap.innerHTML = prop.mapEmbed;
+
+        currentImages = prop.images;
+        currentIndex = 0;
+        mainImg.src = currentImages[currentIndex];
+        thumbsContainer.innerHTML = "";
+        currentImages.forEach((img, i) => {
+            const thumb = document.createElement("img"); thumb.src = img;
+            if (i === 0) thumb.classList.add("active");
+            thumb.addEventListener("click", () => {
+                currentIndex = i;
+                mainImg.src = currentImages[i];
+                thumbsContainer.querySelectorAll("img").forEach(el => el.classList.remove("active"));
+                thumb.classList.add("active");
+            });
+            thumbsContainer.appendChild(thumb);
+        });
+    });
+});
+
+// Carousel Buttons
+prevBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+    mainImg.src = currentImages[currentIndex];
+    thumbsContainer.querySelectorAll("img").forEach(el => el.classList.remove("active"));
+    thumbsContainer.querySelectorAll("img")[currentIndex].classList.add("active");
+});
+nextBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % currentImages.length;
+    mainImg.src = currentImages[currentIndex];
+    thumbsContainer.querySelectorAll("img").forEach(el => el.classList.remove("active"));
+    thumbsContainer.querySelectorAll("img")[currentIndex].classList.add("active");
+});
+
+// Close Modal
+closeBtn.addEventListener("click", () => modal.style.display = "none");
+window.addEventListener("click", e => { if (e.target === modal) modal.style.display = "none"; });
+
+// Mortgage
+calculateMortgageBtn.addEventListener("click", () => {
+    const P = parseFloat(mortgageAmount.value);
+    const Y = parseFloat(mortgageYears.value);
+    const R = parseFloat(mortgageRate.value) / 100 / 12;
+    const N = Y * 12;
+    if (!P || !Y || !R) { mortgageResult.textContent = "Enter valid numbers"; return; }
+    const x = Math.pow(1 + R, N);
+    const monthly = (P * x * R) / (x - 1);
+    mortgageResult.textContent = `Estimated Monthly Payment: $${monthly.toFixed(2)}`;
+});
+
+
+
+//    <!--.... featured-listings..... -->//
+
+
+
+
+
 // <!-- .... about-agency..... -->//
 
 const counters = document.querySelectorAll(".counter");
