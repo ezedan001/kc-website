@@ -24,82 +24,68 @@ window.addEventListener("scroll", () => {
 // ===============================
 // Property Data
 // ===============================
+// Property dataconst properties = {
 const properties = {
     property1: {
-        title: "Luxury Apartment",
-        location: "New York, Manhattan",
+        title: "Modern Family Villa",
+        location: "Los Angeles, California",
+        description: "This villa combines comfort and luxury with 5 spacious bedrooms, landscaped garden, pool, and modern architecture.",
         images: [
-            "serene image/serene lake 1.webp",
-            "serene image/serene lake 2.webp",
-            "serene image/serene lake 3.webp",
-            "serene image/serene lake 4.webp",
-            "serene image/serene lake 5.webp",
-            "serene image/serene lake 6.webp",
-            "serene image/serene lake 7.webp",
-            "serene image/serene lake 8.webp",
-            "serene image/serene lake 9.webp",
-            "serene image/serene lake 10.webp",
-            "serene image/serene lake 11.webp",
-            "serene image/serene lake 12.webp",
-            "serene image/serene lake 13.webp",
-            "serene image/serene lake 14.webp",
-            "serene image/serene lake 15.webp",
-            "serene image/serene lake 16.webp",
-            "serene image/serene lake 17.webp",
-            "serene image/serene lake 18.webp",
-            "serene image/serene lake 19.webp",
-            "serene image/serene lake 20.webp",
-            "serene image/serene lake 21.webp",
-            "serene image/serene lake 22.webp",
-            "serene image/serene lake 23.webp",
-            "serene image/serene lake 24.webp",
-            "serene image/serene lake 25.webp",
-            "serene image/serene lake 26.webp",
-            "serene image/serene lake 27.webp",
-            "serene image/serene lake 28.webp",
-            "serene image/serene lake 29.webp"
+           "serene image/serene lake 1.webp",
+           "serene image/serene lake 2.webp",
+           "serene image/serene lake 3.webp",
+           "serene image/serene lake 4.webp",
+           "serene image/serene lake 5.webp",
+           "serene image/serene lake 6.webp",
+           "serene image/serene lake 7.webp",
+           "serene image/serene lake 8.webp",
+           "serene image/serene lake 9.webp",
+           "serene image/serene lake 10.webp",
+           "serene image/serene lake 11.webp",
+           "serene image/serene lake 12.webp",
+           "serene image/serene lake 13.webp",
+            "images/house1-2.jpg", "images/house1-3.jpg", "images/house1-4.jpg"
         ],
-        description: "A luxurious apartment with modern design, 4 bedrooms, 4 bathrooms, amazing city views, and balcony.",
-        facts: { Bedrooms: 4, Bathrooms: 4, Stories: 2, "Interior Area": "2,730 sqft", "Total Structure": "4,219 sqft" },
-        interior: { Heating: "Electric", Cooling: "Central Air", Appliances: ["Dishwasher", "Dryer", "Microwave", "Electric Range", "Refrigerator", "Washer"], Flooring: "Other", Doors: "High Impact Doors" },
-        bedsBaths: { Full: 3, Half: 1, Rooms: ["Family Room", "Florida Room"] },
-        parkingPool: { Garage: 2, ParkingSpaces: 2, Pool: "Yes, In Ground", View: "Lake, Pool", WaterView: "Yes" },
-        lotConstruction: { LotSize: "0.69 Acres", YearBuilt: 1986, Construction: "CBS Construction", Roof: "Barrel Roof", Zoning: "0100" },
-        agent: "John Doe | +123456789",
-        agentImg: "serene image/agent 1.jpg",
-        mapEmbed: "<iframe src='https://maps.google.com/maps?q=New%20York%20Manhattan&t=&z=13&ie=UTF8&iwloc=&output=embed' width='100%' height='300' style='border:0;' allowfullscreen='' loading='lazy'></iframe>"
+        facts: {
+            Bedrooms: 5,
+            Bathrooms: 4,
+            Size: "3,800 sqft",
+            Garage: "2 Cars",
+            Pool: "Yes",
+            Garden: "Yes",
+            "Year Built": 2021,
+            "Energy Rating": "A+"
+        },
+        agent: {
+            img: "serene image/agent 1.jpg",
+            name: "Daniel Kingston",
+            phone: "+1 310 555 7890",
+            email: "daniel@realestatepro.com"
+        },
+        mapEmbed: "<iframe src='https://maps.google.com/maps?q=Los%20Angeles&t=&z=13&ie=UTF8&iwloc=&output=embed' width='100%' height='300' style='border:0;' loading='lazy'></iframe>"
     }
 };
 
 // Modal Elements
 const modal = document.querySelector(".premium-modal");
-const mainImg = modal.querySelector(".main-img img");
-const thumbsContainer = modal.querySelector(".thumbs");
-const closeBtn = modal.querySelector(".close-btn");
-const modalTitle = modal.querySelector("#modalTitle");
-const modalLocation = modal.querySelector("#modalLocation");
-const modalDescription = modal.querySelector("#modalDescription");
-const modalFacts = modal.querySelector("#modalFacts");
-const modalInterior = modal.querySelector("#modalInterior");
-const modalBedsBaths = modal.querySelector("#modalBedsBaths");
-const modalParking = modal.querySelector("#modalParking");
-const modalLot = modal.querySelector("#modalLot");
-const modalAgent = modal.querySelector("#modalAgent");
-const modalAgentImg = modal.querySelector("#modalAgentImg");
-const modalMap = modal.querySelector("#modalMap");
-const prevBtn = modal.querySelector(".prev-btn");
-const nextBtn = modal.querySelector(".next-btn");
+const closeBtn = document.querySelector(".close-btn");
+const modalTitle = document.querySelector("#modalTitle");
+const modalLocation = document.querySelector("#modalLocation");
+const modalDescription = document.querySelector("#modalDescription");
+const modalFacts = document.querySelector("#modalFacts");
+const modalMap = document.querySelector("#modalMap");
+const modalTrack = document.querySelector(".modal-track");
+const modalPrev = document.querySelector(".modal-prev");
+const modalNext = document.querySelector(".modal-next");
+const agentImg = document.querySelector("#agentImg");
+const agentName = document.querySelector("#agentName");
+const agentPhone = document.querySelector("#agentPhone");
+const agentEmail = document.querySelector("#agentEmail");
 
-// Mortgage
-const mortgageAmount = modal.querySelector("#mortgageAmount");
-const mortgageYears = modal.querySelector("#mortgageYears");
-const mortgageRate = modal.querySelector("#mortgageRate");
-const calculateMortgageBtn = modal.querySelector("#calculateMortgage");
-const mortgageResult = modal.querySelector("#mortgageResult");
-
+// Carousel State
 let currentIndex = 0;
-let currentImages = [];
 
+// Open Modal
 document.querySelectorAll(".property-card").forEach(card => {
     card.addEventListener("click", () => {
         const prop = properties[card.dataset.property];
@@ -109,61 +95,43 @@ document.querySelectorAll(".property-card").forEach(card => {
         modalLocation.textContent = prop.location;
         modalDescription.textContent = prop.description;
         modalFacts.innerHTML = Object.entries(prop.facts).map(([k, v]) => `<li><strong>${k}:</strong> ${v}</li>`).join('');
-        modalInterior.innerHTML = Object.entries(prop.interior).map(([k, v]) => `<li><strong>${k}:</strong> ${Array.isArray(v) ? v.join(', ') : v}</li>`).join('');
-        modalBedsBaths.innerHTML = Object.entries(prop.bedsBaths).map(([k, v]) => `<li><strong>${k}:</strong> ${Array.isArray(v) ? v.join(', ') : v}</li>`).join('');
-        modalParking.innerHTML = Object.entries(prop.parkingPool).map(([k, v]) => `<li><strong>${k}:</strong> ${v}</li>`).join('');
-        modalLot.innerHTML = Object.entries(prop.lotConstruction).map(([k, v]) => `<li><strong>${k}:</strong> ${v}</li>`).join('');
-        modalAgent.textContent = prop.agent;
-        modalAgentImg.src = prop.agentImg;
         modalMap.innerHTML = prop.mapEmbed;
 
-        currentImages = prop.images;
-        currentIndex = 0;
-        mainImg.src = currentImages[currentIndex];
-        thumbsContainer.innerHTML = "";
-        currentImages.forEach((img, i) => {
-            const thumb = document.createElement("img"); thumb.src = img;
-            if (i === 0) thumb.classList.add("active");
-            thumb.addEventListener("click", () => {
-                currentIndex = i;
-                mainImg.src = currentImages[i];
-                thumbsContainer.querySelectorAll("img").forEach(el => el.classList.remove("active"));
-                thumb.classList.add("active");
-            });
-            thumbsContainer.appendChild(thumb);
+        agentImg.src = prop.agent.img;
+        agentName.textContent = prop.agent.name;
+        agentPhone.textContent = `📞 ${prop.agent.phone}`;
+        agentEmail.textContent = `✉️ ${prop.agent.email}`;
+
+        // Load images
+        modalTrack.innerHTML = "";
+        prop.images.forEach(img => {
+            const image = document.createElement("img");
+            image.src = img;
+            modalTrack.appendChild(image);
         });
+        currentIndex = 0;
+        updateModalCarousel();
     });
 });
 
-// Carousel Buttons
-prevBtn.addEventListener("click", () => {
-    currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
-    mainImg.src = currentImages[currentIndex];
-    thumbsContainer.querySelectorAll("img").forEach(el => el.classList.remove("active"));
-    thumbsContainer.querySelectorAll("img")[currentIndex].classList.add("active");
-});
-nextBtn.addEventListener("click", () => {
-    currentIndex = (currentIndex + 1) % currentImages.length;
-    mainImg.src = currentImages[currentIndex];
-    thumbsContainer.querySelectorAll("img").forEach(el => el.classList.remove("active"));
-    thumbsContainer.querySelectorAll("img")[currentIndex].classList.add("active");
-});
+// Modal Carousel
+function updateModalCarousel() {
+    modalTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+modalPrev.addEventListener("click", () => { currentIndex = (currentIndex - 1 + modalTrack.children.length) % modalTrack.children.length; updateModalCarousel(); });
+modalNext.addEventListener("click", () => { currentIndex = (currentIndex + 1) % modalTrack.children.length; updateModalCarousel(); });
 
 // Close Modal
 closeBtn.addEventListener("click", () => modal.style.display = "none");
 window.addEventListener("click", e => { if (e.target === modal) modal.style.display = "none"; });
 
-// Mortgage
-calculateMortgageBtn.addEventListener("click", () => {
-    const P = parseFloat(mortgageAmount.value);
-    const Y = parseFloat(mortgageYears.value);
-    const R = parseFloat(mortgageRate.value) / 100 / 12;
-    const N = Y * 12;
-    if (!P || !Y || !R) { mortgageResult.textContent = "Enter valid numbers"; return; }
-    const x = Math.pow(1 + R, N);
-    const monthly = (P * x * R) / (x - 1);
-    mortgageResult.textContent = `Estimated Monthly Payment: $${monthly.toFixed(2)}`;
+// Contact Agent Form
+document.querySelector("#agentForm").addEventListener("submit", e => {
+    e.preventDefault();
+    alert("Your message has been sent to the agent!");
+    e.target.reset();
 });
+
 
 
 
