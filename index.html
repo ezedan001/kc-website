@@ -2,111 +2,67 @@
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <!-- SEO -->
-    <title>Modern Real Estate — Buy, Rent, Sell Properties</title>
-    <meta name="description"
-        content="Find houses, apartments, and land for sale or rent. Trusted agents, verified listings, and 24/7 support.">
-    <meta name="keywords" content="real estate, buy house, rent apartment, land for sale, property Nigeria">
-    <meta name="author" content="Your Company Name">
-
-    <!-- Canonical -->
-    <link rel="canonical" href="https://www.example.com/">
-
-    <!-- Open Graph (Facebook & LinkedIn) -->
-    <meta property="og:title" content="Modern Real Estate — Find Your Dream Home">
-    <meta property="og:description"
-        content="Browse houses, apartments, and land for sale or rent. Verified agents, trusted listings, and 24/7 support.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.example.com/">
-    <meta property="og:image" content="https://www.example.com/assets/preview.jpg">
-    <meta property="og:site_name" content="Modern Real Estate">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Modern Real Estate — Find Your Dream Home">
-    <meta name="twitter:description" content="Trusted property listings. Houses, apartments & land.">
-    <meta name="twitter:image" content="https://www.example.com/assets/preview.jpg">
-    <meta name="twitter:site" content="@YourTwitterHandle">
-
-    <!-- Favicon & App Icons -->
-    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <meta name="theme-color" content="#ff7a00">
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-
-    <!-- Main stylesheet -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing Website</title>
     <link rel="stylesheet" href="style.css">
-
-    <!-- Extra: PWA & Mobile -->
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
-    <!-- Robots -->
-    <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
-
-    <!-- Analytics (optional) -->
-    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'GA_MEASUREMENT_ID');
-  </script> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <!-- Your content here -->
-
-
-
-
-
-    <header class="navbar">
-        <div class="nav-container">
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
             <!-- Logo -->
-            <div class="logo">
-                <img src="image/RealEstatePro Logo.jpg" alt="RealEstatePro Logo">
-                <a href="#">RealEstate<span>Pro</span></a>
-            </div>
+            <a href="#" class="logo">BrandLogo</a>
 
-            <!-- Navigation Links -->
-            <nav>
-                <ul class="nav-links" id="nav-links">
-                    <li><a href="#" class="active">Home</a></li>
-                    <li><a href="#">Properties</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Blog / News</a></li>
+            <!-- Navigation -->
+            <nav class="nav">
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">Collections</a></li>
+                    <li><a href="#">Lookbook</a></li>
+                    <li><a href="#">About</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
 
-            <!-- Call-to-action -->
-            <a href="#" class="nav-btn">List Your Property</a>
-
-            <!-- Mobile Menu Toggle -->
-            <div class="menu-toggle" id="menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
+            <!-- Icons -->
+            <div class="icons">
+                <a href="#" class="search"><i class="fas fa-search"></i></a>
+                <a href="https://wa.me/YOURNUMBER" class="cart"><i class="fas fa-shopping-bag"></i></a>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Collections</a></li>
+                <li><a href="#">Lookbook</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
         </div>
     </header>
 
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('open');
+            hamburger.classList.toggle('active');
+        });
+    </script>
 
 
 
@@ -123,298 +79,115 @@
 
 
 
-    <section class="hero-section">
-        <!-- Background Video/Image -->
-        <div class="hero-bg">
-            <video autoplay muted loop playsinline class="video-bg">
-                <source src="video/Luxury modern villa.mp4" type="video/mp4">
-            </video>
-            <!-- Fallback image -->
-            <img src="luxury-skyline.jpg" alt="Luxury Skyline" class="image-bg">
-        </div>
 
-        <!-- Overlay -->
-        <div class="overlay"></div>
 
-        <!-- Hero Content -->
+
+
+
+
+    <!-- ✅ HERO SECTION -->
+    <header class="hero">
         <div class="hero-content">
-            <h1>Discover Your Dream Home</h1>
-            <p>Luxury properties curated for your lifestyle</p>
+            <h1>Style Redefined for 2026</h1>
+            <p>Discover the latest fashion essentials — bold, unique, and made for you.</p>
+            <a href="#products" class="cta-btn">🛍️ Shop Now</a>
+        </div>
+    </header>
 
-            <!-- Search Bar (Glass style) -->
-            <form class="hero-search">
-                <select>
-                    <option>Location</option>
-                    <option>New York</option>
-                    <option>Los Angeles</option>
-                    <option>Miami</option>
-                    <option>Dubai</option>
-                </select>
+    <!-- ✅ FEATURED PRODUCTS -->
+    <section id="products" class="featured-products">
+        <h2>🔥 Featured Products</h2>
+        <div class="product-grid">
+            <!-- Product Card 1 -->
+            <div class="product-card best-seller">
+                <span class="discount-badge">-20% Off</span>
+                <div class="product-image">
+                    <img src="https://via.placeholder.com/300x350?text=Cap" alt="Cap">
+                </div>
+                <h3>Street Flex Cap</h3>
+                <div class="price">$25.00</div>
+                <div class="rating">⭐ ⭐ ⭐ ⭐ ⭐</div>
+                <div class="quantity">
+                    <label>Qty:</label>
+                    <input type="number" min="1" max="10" value="1">
+                </div>
+                <button class="quick-view">🛒 Quick View</button>
+                <a href="https://wa.me/234XXXXXXXXXX" target="_blank" class="whatsapp-buy">💬 Buy on WhatsApp</a>
+            </div>
 
-                <select>
-                    <option>Property Type</option>
-                    <option>Apartment</option>
-                    <option>Villa</option>
-                    <option>Penthouse</option>
-                    <option>Condo</option>
-                </select>
+            <!-- Product Card 2 -->
+            <div class="product-card">
+                <span class="discount-badge">-15% Off</span>
+                <div class="product-image">
+                    <img src="https://via.placeholder.com/300x350?text=Shirt" alt="Shirt">
+                </div>
+                <h3>Classic Cotton Shirt</h3>
+                <div class="price">$40.00</div>
+                <div class="rating">⭐ ⭐ ⭐ ⭐ ☆</div>
+                <div class="quantity">
+                    <label>Qty:</label>
+                    <input type="number" min="1" max="10" value="1">
+                </div>
+                <button class="quick-view">🛒 Quick View</button>
+                <a href="https://wa.me/234XXXXXXXXXX" target="_blank" class="whatsapp-buy">💬 Buy on WhatsApp</a>
+            </div>
 
-                <select>
-                    <option>Price Range</option>
-                    <option>$200k - $500k</option>
-                    <option>$500k - $1M</option>
-                    <option>$1M - $5M</option>
-                    <option>$5M+</option>
-                </select>
-
-                <select>
-                    <option>Bedrooms</option>
-                    <option>1+</option>
-                    <option>2+</option>
-                    <option>3+</option>
-                    <option>4+</option>
-                </select>
-
-                <button type="submit">Search</button>
-            </form>
-
-            <!-- Call-to-action -->
-            <a href="#" class="hero-cta">Find Your Dream Home</a>
+            <!-- Product Card 3 -->
+            <div class="product-card best-seller">
+                <div class="product-image">
+                    <img src="https://via.placeholder.com/300x350?text=Shoes" alt="Shoes">
+                </div>
+                <h3>Urban Run Sneakers</h3>
+                <div class="price">$65.00</div>
+                <div class="rating">⭐ ⭐ ⭐ ⭐ ⭐</div>
+                <div class="quantity">
+                    <label>Qty:</label>
+                    <input type="number" min="1" max="10" value="1">
+                </div>
+                <button class="quick-view">🛒 Quick View</button>
+                <a href="https://wa.me/234XXXXXXXXXX" target="_blank" class="whatsapp-buy">💬 Buy on WhatsApp</a>
+            </div>
         </div>
     </section>
 
+    <!-- ✅ FLOATING WHATSAPP ICON -->
+    <!-- <a href="https://wa.me/234XXXXXXXXXX" target="_blank" class="floating-whatsapp">
+        💬
+    </a> -->
 
-
-
-
-
-
-
-
-
-
-    <section class="premium-listings">
-        <div class="section-header">
-            <h2>Featured Premium Properties</h2>
-            <p>Discover exclusive homes with detailed insights</p>
-        </div>
-
-        <div class="listings-grid">
-            <!-- Property Card -->
-            <div class="property-card" data-property="property1">
-                <div class="carousel-container">
-                    <button class="carousel-btn prev">&#10094;</button>
-                    <div class="carousel-track">
-                        <img src="serene image/serene lake 1.webp" alt="House Image 1">
-                        <img src="serene image/serene lake 2.webp" alt="House Image 2">
-                        <img src="serene image/serene lake 3.webp" alt="House Image 3">
-                    </div>
-                    <button class="carousel-btn next">&#10095;</button>
-                </div>
-                <span class="price">$1,250,000</span>
-
-                <div class="property-info">
-                    <h3>Modern Family Villa</h3>
-                    <p>Los Angeles, California</p>
-                    <ul class="property-details">
-                        <li>5 Beds</li>
-                        <li>4 Baths</li>
-                        <li>3,800 sqft</li>
-                    </ul>
-                    <button class="details-btn">View Details</button>
-                </div>
-            </div>
-
-
-
-             <div class="property-card" data-property="property1">
-                <div class="carousel-container">
-                    <button class="carousel-btn prev">&#10094;</button>
-                    <div class="carousel-track">
-                        <img src="serene image/serene lake 1.webp" alt="House Image 1">
-                        <img src="serene image/serene lake 2.webp" alt="House Image 2">
-                        <img src="serene image/serene lake 3.webp" alt="House Image 3">
-                    </div>
-                    <button class="carousel-btn next">&#10095;</button>
-                </div>
-                <span class="price">$1,250,000</span>
-
-                <div class="property-info">
-                    <h3>Modern Family Villa</h3>
-                    <p>Los Angeles, California</p>
-                    <ul class="property-details">
-                        <li>5 Beds</li>
-                        <li>4 Baths</li>
-                        <li>3,800 sqft</li>
-                    </ul>
-                    <button class="details-btn">View Details</button>
-                </div>
-            </div>
-
-
-             <div class="property-card" data-property="property1">
-                <div class="carousel-container">
-                    <button class="carousel-btn prev">&#10094;</button>
-                    <div class="carousel-track">
-                        <img src="serene image/serene lake 1.webp" alt="House Image 1">
-                        <img src="serene image/serene lake 2.webp" alt="House Image 2">
-                        <img src="serene image/serene lake 3.webp" alt="House Image 3">
-                    </div>
-                    <button class="carousel-btn next">&#10095;</button>
-                </div>
-                <span class="price">$1,250,000</span>
-
-                <div class="property-info">
-                    <h3>Modern Family Villa</h3>
-                    <p>Los Angeles, California</p>
-                    <ul class="property-details">
-                        <li>5 Beds</li>
-                        <li>4 Baths</li>
-                        <li>3,800 sqft</li>
-                    </ul>
-                    <button class="details-btn">View Details</button>
-                </div>
-            </div>
-
-
-             <div class="property-card" data-property="property1">
-                <div class="carousel-container">
-                    <button class="carousel-btn prev">&#10094;</button>
-                    <div class="carousel-track">
-                        <img src="serene image/serene lake 1.webp" alt="House Image 1">
-                        <img src="serene image/serene lake 2.webp" alt="House Image 2">
-                        <img src="serene image/serene lake 3.webp" alt="House Image 3">
-                    </div>
-                    <button class="carousel-btn next">&#10095;</button>
-                </div>
-                <span class="price">$1,250,000</span>
-
-                <div class="property-info">
-                    <h3>Modern Family Villa</h3>
-                    <p>Los Angeles, California</p>
-                    <ul class="property-details">
-                        <li>5 Beds</li>
-                        <li>4 Baths</li>
-                        <li>3,800 sqft</li>
-                    </ul>
-                    <button class="details-btn">View Details</button>
-                </div>
-            </div>
-
-
-             <div class="property-card" data-property="property1">
-                <div class="carousel-container">
-                    <button class="carousel-btn prev">&#10094;</button>
-                    <div class="carousel-track">
-                        <img src="serene image/serene lake 1.webp" alt="House Image 1">
-                        <img src="serene image/serene lake 2.webp" alt="House Image 2">
-                        <img src="serene image/serene lake 3.webp" alt="House Image 3">
-                    </div>
-                    <button class="carousel-btn next">&#10095;</button>
-                </div>
-                <span class="price">$1,250,000</span>
-
-                <div class="property-info">
-                    <h3>Modern Family Villa</h3>
-                    <p>Los Angeles, California</p>
-                    <ul class="property-details">
-                        <li>5 Beds</li>
-                        <li>4 Baths</li>
-                        <li>3,800 sqft</li>
-                    </ul>
-                    <button class="details-btn">View Details</button>
-                </div>
-            </div>
-
-
-             <div class="property-card" data-property="property1">
-                <div class="carousel-container">
-                    <button class="carousel-btn prev">&#10094;</button>
-                    <div class="carousel-track">
-                        <img src="serene image/serene lake 1.webp" alt="House Image 1">
-                        <img src="serene image/serene lake 2.webp" alt="House Image 2">
-                        <img src="serene image/serene lake 3.webp" alt="House Image 3">
-                    </div>
-                    <button class="carousel-btn next">&#10095;</button>
-                </div>
-                <span class="price">$1,250,000</span>
-
-                <div class="property-info">
-                    <h3>Modern Family Villa</h3>
-                    <p>Los Angeles, California</p>
-                    <ul class="property-details">
-                        <li>5 Beds</li>
-                        <li>4 Baths</li>
-                        <li>3,800 sqft</li>
-                    </ul>
-                    <button class="details-btn">View Details</button>
-                </div>
-            </div>
-
-            
-        </div>
-    </section>
-
-    <!-- Modal -->
-    <div class="premium-modal">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-
-            <!-- Left: Carousel -->
-            <div class="modal-left">
-                <div class="modal-carousel">
-                    <button class="modal-prev">&#10094;</button>
-                    <div class="modal-track"></div>
-                    <button class="modal-next">&#10095;</button>
-                </div>
-            </div>
-
-            <!-- Right: Property Info -->
-            <div class="modal-right">
-                <h2 id="modalTitle"></h2>
-                <p id="modalLocation"></p>
-                <p id="modalDescription"></p>
-
-                <div class="modal-section">
-                    <h4>Facts & Features</h4>
-                    <ul id="modalFacts" class="property-details"></ul>
-                </div>
-
-                <div class="modal-section">g
-                    <h4>Agent Information</h4>
-                    <div class="agent-info">
-                        <img id="agentImg" src="serene image/agent 1.jpg" alt="Agent Photo">
-                        <div>
-                            <p><strong id="agentName"></strong></p>
-                            <p id="agentPhone"></p>
-                            <p id="agentEmail"></p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="modal-section">
-                    <h4>Contact Agent</h4>
-                    <form id="agentForm">
-                        <input type="text" id="clientName" placeholder="Your Name" required>
-                        <input type="email" id="clientEmail" placeholder="Your Email" required>
-                        <input type="tel" id="clientPhone" placeholder="Your Phone">
-                        <textarea id="clientMessage" placeholder="Your Message"></textarea>
-                        <button type="submit" class="details-btn">Send Message</button>
-                    </form>
-                </div>
-
-                <div class="modal-section">
-                    <h4>Neighborhood & Map</h4>
-                    <div id="modalMap" class="modal-map"></div>
-                </div>
-            </div>
+    <!-- ✅ QUICK VIEW POPUP -->
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <img src="https://via.placeholder.com/400x450" alt="Product Detail">
+            <h3>Product Title</h3>
+            <p>High-quality fabric, perfect fit, and stylish design for any occasion.</p>
+            <div class="price">$40.00</div>
+            <button class="whatsapp-buy">💬 Order via WhatsApp</button>
         </div>
     </div>
 
+    <script>
+        // 🔄 Product Shuffle
+        const grid = document.querySelector('.product-grid');
+        const products = Array.from(grid.children);
+        products.sort(() => Math.random() - 0.5);
+        products.forEach(p => grid.appendChild(p));
+
+        // 🛒 Quick View Popup
+        const popup = document.getElementById('popup');
+        const quickViewBtns = document.querySelectorAll('.quick-view');
+        const closePopup = document.querySelector('.close');
+
+        quickViewBtns.forEach(btn => {
+            btn.addEventListener('click', () => popup.classList.add('show'));
+        });
+
+        closePopup.addEventListener('click', () => popup.classList.remove('show'));
+    </script>
 
 
 
-    <!--.... featured-listings end..... -->
 
 
 
@@ -423,267 +196,73 @@
 
 
 
-    <!-- .... about-agency..... -->
 
-    <section class="about-agency">
-        <div class="container">
-            <!-- Section Header -->
-            <div class="section-header">
-                <h2>About RealEstate<span>Pro</span></h2>
-                <p>Your trusted partner in luxury real estate worldwide</p>
+
+
+
+
+
+
+    <!-- ✅ ABOUT SECTION -->
+    <section class="about">
+        <div class="about-container">
+            <div class="about-text">
+                <h2 class="about-title">👕 About <span>Our Brand</span></h2>
+                <p class="intro">
+                    Founded in 2020, <strong>UrbanMode</strong> redefines fashion with bold, comfortable, and
+                    sustainable designs.
+                    Every piece reflects creativity, street culture, and innovation — crafted for dreamers, creators,
+                    and go-getters.
+                </p>
+
+                <div class="about-cards">
+                    <div class="card fade-in">
+                        <h3>🌍 Our Mission</h3>
+                        <p>To inspire self-expression through quality fashion that merges comfort and confidence —
+                            designed for everyone, everywhere.</p>
+                    </div>
+                    <div class="card fade-in delay1">
+                        <h3>💎 Our Vision</h3>
+                        <p>To become the most trusted and loved clothing brand globally by blending culture, technology,
+                            and timeless design.</p>
+                    </div>
+                    <div class="card fade-in delay2">
+                        <h3>🧵 Our Story</h3>
+                        <p>Born on the streets and refined by style. UrbanMode started as a small creative idea — now
+                            shaping the next era of fashion.</p>
+                    </div>
+                </div>
+
+                <a href="#products" class="cta-btn">🛍️ Explore Collection</a>
             </div>
 
-            <!-- Main Content -->
-            <div class="agency-content">
-                <!-- Text -->
-                <div class="agency-text">
-                    <h3>We Make Dreams Come True</h3>
-                    <p>
-                        At <span>RealEstatePro</span>, we specialize in connecting discerning clients with luxury
-                        properties across the globe.
-                        Our team ensures a seamless experience from discovery to ownership, combining professionalism
-                        with a personal touch.
-                    </p>
-                    <p>
-                        Our mission is simple: to provide the most curated, high-quality real estate listings and help
-                        you find your dream home effortlessly.
-                    </p>
-                    <a href="#" class="cta-btn">Learn More About Us</a>
-
-                    <!-- Premium Feature Cards -->
-                    <div class="features-cards">
-                        <div class="feature-card">
-                            <img src="image/Expert Team.jpg" alt="Expert Team">
-                            <h4>Expert Team</h4>
-                            <p>Professional agents with deep market knowledge.</p>
-                        </div>
-                        <div class="feature-card">
-                            <img src="image/Luxury Listing.jpg" alt="Luxury Listings">
-                            <h4>Luxury Listings</h4>
-                            <p>Handpicked properties with top-tier quality.</p>
-                        </div>
-                        <div class="feature-card">
-                            <img src="image/Global Reach.jpg" alt="Global Reach">
-                            <h4>Global Reach</h4>
-                            <p>Access to properties across major cities worldwide.</p>
-                        </div>
-                    </div>
+            <div class="about-images">
+                <div class="image-grid">
+                    <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=800&q=80"
+                        alt="Brand Image 1">
+                    <img src="https://images.unsplash.com/photo-1521335629791-ce4aec67dd47?auto=format&fit=crop&w=800&q=80"
+                        alt="Brand Image 2">
+                    <img src="https://images.unsplash.com/photo-1516822003754-cca485356ecb?auto=format&fit=crop&w=800&q=80"
+                        alt="Brand Image 3">
+                    <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80"
+                        alt="Brand Image 4">
                 </div>
-
-                <!-- Image + Stats -->
-                <div class="agency-image">
-                    <img src="image/real-estate-team.jpg" alt="Our Team">
-                    <div class="agency-stats">
-                        <div class="stat">
-                            <h3 class="counter" data-target="1200">0</h3>
-                            <p>Properties Sold</p>
-                        </div>
-                        <div class="stat">
-                            <h3 class="counter" data-target="500">0</h3>
-                            <p>Happy Clients</p>
-                        </div>
-                        <div class="stat">
-                            <h3 class="counter" data-target="15">0</h3>
-                            <p>Awards Won</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- .... about-agency..... -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- ...... why-choose-us...... -->
-
-    <section class="why-choose-us">
-        <div class="container">
-            <!-- Section Header -->
-            <div class="section-header">
-                <h2>Why Choose <span>RealEstatePro</span>?</h2>
-                <p>Discover the reasons our clients trust us for luxury real estate solutions</p>
-            </div>
-
-            <!-- Features Grid -->
-            <div class="features-grid">
-                <!-- Feature Card 1 -->
-                <div class="feature-card">
-                    <div class="icon">
-                        <img src="image/Trusted Agents.jpg" alt="Trusted Agents">
-                    </div>
-                    <h3>Trusted Agents</h3>
-                    <p>Professional and certified agents ensuring a seamless experience.</p>
-                </div>
-
-                <!-- Feature Card 2 -->
-                <div class="feature-card">
-                    <div class="icon">
-                        <img src="image/Wide Listings.jpg" alt="Wide Listings">
-                    </div>
-                    <h3>Wide Listings</h3>
-                    <p>Access thousands of luxury properties across major cities worldwide.</p>
-                </div>
-
-                <!-- Feature Card 3 -->
-                <div class="feature-card">
-                    <div class="icon">
-                        <img src="image/Easy Process.jpg" alt="Easy Process">
-                    </div>
-                    <h3>Easy Process</h3>
-                    <p>Simplified buying and selling process with expert guidance at every step.</p>
-                </div>
-
-                <!-- Feature Card 4 -->
-                <div class="feature-card">
-                    <div class="icon">
-                        <img src="image/Affordable Prices.jpg" alt="Affordable Prices">
-                    </div>
-                    <h3>Affordable Prices</h3>
-                    <p>Competitive pricing without compromising on quality or service.</p>
-                </div>
-            </div>
-
-            <!-- Optional CTA -->
-            <div class="section-cta">
-                <a href="#" class="cta-btn">Explore Our Services</a>
             </div>
         </div>
     </section>
 
-    <!-- ...... why-choose-us...... -->
-
-
-
-
-
-
-
-
-
-
-
-    <!-- /* Testimonials Section */ -->
-
-    <section class="testimonials-section">
-        <div class="container">
-            <h2 class="section-title">Customer Testimonials</h2>
-            <div class="testimonials-grid">
-
-                <!-- Testimonial 1 -->
-                <div class="testimonial-card">
-                    <div class="client-image">
-                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Client 1">
-                    </div>
-                    <p class="testimonial-text">
-                        "Working with this agency was seamless! I found my dream home in just a week."
-                    </p>
-                    <div class="client-info">
-                        <h3>Jane Doe</h3>
-                        <div class="stars">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star-half-stroke"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial 2 -->
-                <div class="testimonial-card">
-                    <div class="client-image">
-                        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Client 2">
-                    </div>
-                    <p class="testimonial-text">
-                        "Professional and friendly agents. They made renting stress-free and fast."
-                    </p>
-                    <div class="client-info">
-                        <h3>John Smith</h3>
-                        <div class="stars">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial 3 -->
-                <div class="testimonial-card">
-                    <div class="client-image">
-                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client 3">
-                    </div>
-                    <p class="testimonial-text">
-                        "Highly recommend! Their service was top-notch and very trustworthy."
-                    </p>
-                    <div class="client-info">
-                        <h3>Emily Clark</h3>
-                        <div class="stars">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star-half-stroke"></i>
-                            <i class="fa-regular fa-star"></i>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- /* Testimonials Section */ -->
-
-
-
-
-
-
-
-
-
-
-
-    <!-- 🔹 Widget -->
-    <div class="widget" id="widget">
-        <div class="widget-header">
-            <span id="status-dot"></span>
-            <span id="status-text">Online now</span>
-            <button id="close-widget">✖</button>
-        </div>
-        <div class="widget-body">
-            <p id="greeting">👋 Hi! Need help finding your dream home?</p>
-
-            <h4>Contact Us:</h4>
-            <button class="whatsapp-btn" onclick="openWhatsApp()">💬 WhatsApp</button>
-            <button class="email-btn" onclick="openEmail()">📩 Email</button>
-
-            <h4>Quick Templates:</h4>
-            <select id="templateSelect" onchange="setTemplate()">
-                <option value="">-- Choose a message --</option>
-                <option value="I’m interested in buying a house in Dubai.">House in Dubai</option>
-                <option value="Do you have rental apartments in UK?">Rental in UK</option>
-                <option value="Can you send me property options under $100,000?">Budget under $100k</option>
-            </select>
-        </div>
-    </div>
-
-    <!-- Floating Button -->
-    <div class="chat-button" id="chat-button">💬</div>
+    <script>
+        // 🎬 Scroll Animation
+        const fadeEls = document.querySelectorAll('.fade-in');
+        window.addEventListener('scroll', () => {
+            fadeEls.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 100) {
+                    el.classList.add('visible');
+                }
+            });
+        });
+    </script>
 
 
 
@@ -697,71 +276,73 @@
 
 
 
-
-
-    <footer class="footer-section">
+    <!-- 🌟 FOOTER SECTION (2026 VERSION) -->
+    <footer class="footer-2026">
         <div class="footer-container">
-
-            <!-- Logo & About -->
-            <div class="footer-logo">
-                <img src="image/RealEstatePro Logo.jpg" alt="Real Estate Logo">
-                <h2>RealEstate<span class="pro">Pro</span></h2>
-                <p>Your trusted partner in finding dream homes with ease and professionalism.</p>
+            <!-- Brand Info -->
+            <div class="footer-about">
+                <h3 class="brand-name">UrbanMode</h3>
+                <p>Your one-stop destination for trendy, comfortable, and sustainable fashion. Dress bold. Live free.
+                </p>
             </div>
 
             <!-- Quick Links -->
             <div class="footer-links">
-                <h3>Quick Links</h3>
+                <h4>Quick Links</h4>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Properties</a></li>
-                    <li><a href="#">Agents</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#collections">Collections</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
 
-            <!-- Contact Info -->
-            <div class="footer-contact">
-                <h3>Contact Info</h3>
-                <p><i class="fa-solid fa-phone"></i> +234 123 456 789</p>
-                <p><i class="fa-solid fa-envelope"></i> info@realestatepro.com</p>
-                <p><i class="fa-solid fa-location-dot"></i> 123 Main St, Enugu, Nigeria</p>
+            <!-- Newsletter -->
+            <div class="footer-newsletter">
+                <h4>Stay Updated</h4>
+                <p>Join our newsletter for style drops & exclusive offers.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
             </div>
 
             <!-- Social Media -->
             <div class="footer-social">
-                <h3>Follow Us</h3>
+                <h4>Follow Us</h4>
                 <div class="social-icons">
-                    <a href="daniel"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://wa.me/234XXXXXXXXXX" target="_blank"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
-
         </div>
 
-        <!-- Footer Bottom -->
+        <!-- Copyright -->
         <div class="footer-bottom">
-            <p>&copy; 2026 RealEstatePro. All rights reserved.
-                <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+            <p>© <span id="year"></span> UrbanMode. All rights reserved. Designed with ❤️ for fashion-forward creators.
             </p>
         </div>
     </footer>
 
+    <!-- 💬 Floating WhatsApp Button -->
+    <a href="https://wa.me/234XXXXXXXXXX" target="_blank" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Auto-update year
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
 
 
 
-
-
-
-
-
-
-
-    <script src="javascript.js"></script>
 </body>
 
 </html>
